@@ -1,41 +1,17 @@
-\documentclass[letterpaper,11pt]{article}
+\documentclass[a4paper,11pt]{article}
 
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
 \usepackage{titlesec}
-\usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
-\usepackage[english]{babel}
 \usepackage{tabularx}
-\input{glyphtounicode}
+\usepackage{geometry}
 
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
+% Font
+\usepackage{charter}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\geometry{left=0.5in, right=0.5in, top=0.5in, bottom=1in}
 
 \urlstyle{same}
 
@@ -51,169 +27,143 @@
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
+% Remove page numbering
+\pagenumbering{gobble}
+
 %-------------------------
 % Custom commands
-\newcommand{\resumeItem}[1]{
-\item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
-
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}
 \item
   \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
     \textbf{#1} & #2 \\
     \textit{\small#3} & \textit{\small #4} \\
-  \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-\item
-  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-    \textit{\small#1} & \textit{\small #2} \\
-  \end{tabular*}\vspace{-7pt}
+  \end{tabular*}\vspace{-8pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
 \item
   \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-    \small#1 & #2 \\
-  \end{tabular*}\vspace{-7pt}
+    \small\textbf{#1} & #2 \\
+  \end{tabular*}\vspace{-8pt}
 }
 
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\chref}[3]{\href{#2}{\color{#1}{\underline{#3}}}}
 
+\setlist{leftmargin=16pt}
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-\newcommand{\resumeSubHeadingListStart}{
-\begin{itemize}[leftmargin=0.15in, label={}]}
-    \newcommand{\resumeSubHeadingListEnd}{
-  \end{itemize}}
-\newcommand{\resumeItemListStart}{
-\begin{itemize}}
-    \newcommand{\resumeItemListEnd}{
-  \end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{document}
 
 \begin{center}
-  \textbf{\Huge \scshape John Doe}
-
-  \small 123-456-7890 $|$
-  \href{mailto:genericemail@example.com}{\underline{genericemail@example.com}} $|$
-  \href{https://linkedin.com/in/johndoe}{\underline{linkedin.com/in/johndoe}}
+  \textbf{\Huge Fadil Muh} \\
+  \vspace{2mm}
+  \begin{tabular}{c c}
+    \chref{blue}{mailto:fadilmuh2002@gmail.com}{fadilmuh2002@gmail.com}
+    \hspace{4pt}$|$\hspace{4pt}
+    \chref{blue}{https://github.com/fadilmuh22}{github.com/fadilmuh22}
+    \hspace{4pt}$|$\hspace{4pt}
+    \chref{blue}{https://linkedin.com/in/fadilmuh22}{linkedin.com/in/fadilmuh22}
+  \end{tabular}
 \end{center}
 
-%-----------EDUCATION-----------
-\section{Education}
-\resumeSubHeadingListStart
-\resumeSubheading
-{Generic High School}{Generic City, State}
-{GPA 3.76, Class rank 63/350, SAT 1510}{Sept. 2021 -- Jun 2025}
-\resumeSubHeadingListEnd
-
-%-----------Extracurriculars-----------
-\section{Extracurricular Activities}
-\resumeSubHeadingListStart
-
-\resumeSubheading
-{Student Government}{Sept. 2023 -- Jun. 2024}
-{Treasurer}{Generic City, State}
-\resumeItemListStart
-\resumeItem{Developed budget proposals, collaborating with the student government team to plan major school events.}
-\resumeItem{Organized and led fundraising events, \textbf{raising over \$5,000} for school activities and projects.}
-\resumeItem{Managed the student government budget, ensuring accurate tracking and allocation of funds.}
-\resumeItemListEnd
-
-\resumeSubheading
-{Math Team}{Sept. 2022 -- Present}
-{Team Captain}{Generic City, State}
-\resumeItemListStart
-\resumeItem{Competed in regional, state, and national-level math competitions.}
-\resumeItem{Facilitated weekly study sessions to discuss high-level \textbf{Probability Theory, Geometry \& Algebra.}}
-\resumeItem{Led a 26-member math team as captain, overseeing strategy development and competition preparation.}
-\resumeItemListEnd
-
-\resumeSubheading
-{Varsity Swim Team}{Sept. 2021 -- June 2024}
-{Team Captain}{Generic City, State}
-\resumeItemListStart
-\resumeItem{Led the varsity swim team to its \textbf{inaugural section championship} through leadership and strategic planning.}
-\resumeItem{Mentored junior team members, providing guidance on proper techniques, race preparation, and sportsmanship.}
-\resumeItemListEnd
-
-\resumeSubHeadingListEnd
-
-%-----------Experience-----------
-\section{Experience}
-\resumeSubHeadingListStart
-
-\resumeSubheading
-{Generic Startup}{June 2024 -- Present}
-{Co-Founder}{Generic City, State}
-\resumeItemListStart
-\resumeItem{\textbf{Co-founded startup} specializing in adjustable dipping containers, optimizing dining experience.}
-\resumeItem{Developed minimum viable product (MVP) capable of early-stage revenue generation.}
-\resumeItem{Received positive feedback from established brands for innovative product designs.}
-\resumeItem{Validated startup idea through market research and interview feedback as a part of entrepreneurial program.}
-\resumeItemListEnd
-
-\resumeSubheading
-{Private Math Tutor}{Sept. 2021 -- Present}
-{Tutor}{Generic City, State}
-\resumeItemListStart
-\resumeItem{Provided personalized tutoring sessions in algebra, calculus, and geometry to students.}
-\resumeItem{Developed lesson plans for diverse learning styles, leading to improvements by \textbf{upwards of 1.5 letter grades}.}
-\resumeItemListEnd
-
-\resumeSubHeadingListEnd
-
-\section{Awards}
-\resumeSubHeadingListStart
-\resumeSubheading
-{Scholastic All-American}{Aug. 2023 -- Present}
-{}{}
-\resumeItemListStart
-\vspace{-4mm}
-\resumeItem{National award given to student-athletes who achieve a \textbf{national time standard} while maintaining a 3.5+ GPA.}
-\resumeItemListEnd
-
-\resumeSubheading
-{National Honor Society}{June 2023 -- Present}
-{}{}
-\resumeItemListStart
-\vspace{-4mm}
-\resumeItem{Award presented to students with outstanding achievements in academics, leadership, and community service.}
-\resumeItemListEnd
-\resumeSubHeadingListEnd
-
-%-----------Courses-----------
-\section{Courses}
+%-----------Experiences-----------
+\section{Experiences}
 \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{
-    \item{
-        \vspace{1mm}
-        \textbf{Courses}{: AP Calculus BC, AP Chemistry, AP Physics, AP World History, AP U.S. History, AP Statistics, AP Literature} \\
+    \resumeSubheading{React Developer \& Flutter Developer}{2020 - 2022}{SoftwareSeni}{}
+    \begin{itemize}
+      \item Enhanced and maintained Software Delivery Platform web app.
+      \item Architected and Developed an Online Health Check-ups mobile app.
+      \item Develop and maintain web applications for enterprise solutions in education sectors.
+      \item Worked collaboratively with a diverse team of colleagues from various cultural backgrounds.
+      \item Contributed to the development and maintenance of monorepo and microservices-based architectures.
+    \end{itemize}\vspace{-4pt}
 
-    }}
+    \resumeSubheading{Full-Stack Developer}{2022 - 2024}{Freelance}{}
+    \begin{itemize}
+      \item Developed Android and IOS applications and deployed them to the Play Store and App Store.
+      \item Implement design to a mobile application and integrate it with backend service.
+      \item Integrate the application with Firebase for authentication service.
+      \item Quick ISK. Quick accreditation prediction for Telkom University. Developed for Android and IOS using Flutter.
+      \item My Garden. Pest reporting application for PT Perkebunan Nusantara. Developed for Android using Flutter.
+      \item Ampuh. A reporting app for more than 5000 engineers. Migrated the app framework from Ionic 3 to 5.
+    \end{itemize}\vspace{-4pt}
+
+    \resumeSubheading{React Developer \& Flutter Developer Intern}{Sep 2021 - Dec 2021}{Sagara Technology}{}
+    \begin{itemize}
+      \item Coded Crowdfunding web app frontend with React.
+      \item Implement web design to a reusable component.
+      \item Integrate components to use REST API service using Redux, React Hook, and Axios.
+      \item Built the Crowdfunding mobile app from scratch using Flutter.
+      \item Used Bloc architecture for the mobile app.
+    \end{itemize}\vspace{-4pt}
+
 \end{itemize}
 
-%-----------Skill and Interests-----------
-\section{Skills \& Interests}
+%-----------Projects-----------
+\section{Projects}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \resumeProjectHeading{Ecoviary}{March 2024}{}{}
+    \begin{itemize}
+      \item Developed Ecoviary. A smart poultry farming innovation mobile app.
+      \item Coded the backend to manage real-time data and interact with IOT device.
+      \item Deployed the backend to the Digitalocean server using Ansible and Terraform.
+    \end{itemize}\vspace{-8pt}
+
+    \resumeProjectHeading{Dapur Pasar}{December 2022}{}{}
+    \begin{itemize}
+      \item Worked with a team of 4 people to develop a marketplace mobile application.
+      \item Develop and Built the mobile app for users, drivers, and partners using IONIC and Angular.
+      \item Architected the app using MVC and Dependency Injection.
+      \item Integrate Real-time tracking order using WebSocket.
+      \item Coded the backend for WebSocket in Nodejs.
+    \end{itemize}\vspace{-8pt}
+
+    \resumeProjectHeading{Aksesku}{August 2022}{}{}
+    \begin{itemize}
+      \item Develop mobile apps for taking attendance in a University using React Native.
+      \item Integrate with API to capture and send attendance data.
+      \item Working closely with team lead to maintain clean code and code readability.
+    \end{itemize}\vspace{-8pt}
+
+    \resumeProjectHeading{Jastis LMS}{April 2021}{}{}
+    \begin{itemize}
+      \item Led and worked with a team of 7 people to develop a multi-platform LMS application.
+      \item Built the mobile app using Flutter.
+      \item Architected the app using MVC and Dependency Injection.
+      \item Integrate Rest API and Firebase for push notification.
+      \item Coded the backend using Laravel and MongoDB.
+      \item Rebuilt and published the Laravel-FCM to be used in the backend service.
+    \end{itemize}\vspace{-8pt}
+
+    \resumeProjectHeading{IoT-based Attendance Device and Application}{September 2020}{}{}
+    \begin{itemize}
+      \item Created the CMS and the Backend for communicating with the Attendance device using REST API.
+      \item Integrate mailing service to send QR code tickets for attendance.
+      \item Coded the microcontroller device using C++ for taking temperature and attendance ID from the QR code.
+    \end{itemize}\vspace{-8pt}
+
+\end{itemize}
+
+%-----------Skills-----------
+\section{Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
     \small{
     \item{
         \vspace{1mm}
-        \textbf{Skills}{: Probability Theory, Web Design, Microsoft Excel, Microsoft Office} \\
-        \vspace{1mm}
-        \textbf{Interests}{: Photography, Creative Writing, Archery, Sports} \\
-        \vspace{1mm}
+        \textbf{Languages}{: Typescript, JavaScript, Node, Go, Python, Dart, Kotlin} \\
+        \textbf{Framework \& Libraries}{: React, Nest, Next, Angular, Vue, Express,  PostgreSQL, MySQL, Flutter, Echo } \\
+        \textbf{Other}{: Ansible, Terraform, Docker, Git, Restful API, Tailwind Cloud Computing, Machine Learning, DevSecOps} \\
+      }
+    }
+\end{itemize}
 
-    }}
+%-----------Education-----------
+\section{Education}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \resumeSubheading{SMKN 4 Bandung}{2018 - 2021}{Software Engineering}{}
 \end{itemize}
 
 \end{document}
